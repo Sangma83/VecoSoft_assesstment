@@ -1,16 +1,74 @@
-# React + Vite
+📦 Order Tracking Screen
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive Order Tracking UI built with React.js for an e-commerce application.
 
-Currently, two official plugins are available:
+✨ Features
+📍 Clear order delivery timeline
+🚚 Processing → Shipped → Out for Delivery → Delivered
+📅 Estimated delivery date & time
+📦 Order and product summary
+📞 Contact Support
+⚠️ Report delivery issues
+🔴 Delayed Order state
+📦 Delivered but Not Received state
+🔍 Tracking Not Available state
+📱 Responsive design for 360–430px mobile screens
+🎨 Clean and user-friendly UI
+🧪 Mock/static data — no backend required
+🛠️ Tech Stack
+React.js
+JavaScript
+CSS
+Lucide React Icons
+Vite
+🚀 Getting Started
+1. Install dependencies
+npm install
+2. Install icons
+npm install lucide-react
+3. Run the project
+npm run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Open the local URL shown in your terminal, usually:
 
-## React Compiler
+http://localhost:5173
+🧪 Order States
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The UI supports four states:
 
-## Expanding the ESLint configuration
+State	Description
+🟢 Normal	Order is progressing normally
+🔴 Delayed	Delivery has been delayed
+🟠 Not Received	Order shows delivered but customer didn't receive it
+⚪ No Tracking	Tracking information is not available yet
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Use the demo buttons to switch between states and preview the different experiences.
+
+📁 Project Structure
+src/
+├── components/
+│   ├── DelayedMessage.jsx
+│   ├── DeliveryAddress.jsx
+│   ├── DeliveryInfo.jsx
+│   ├── Header.jsx
+│   ├── NotReceivedMessage.jsx
+│   ├── OrderItems.jsx
+│   ├── OrderTracking.jsx
+│   ├── Timeline.jsx
+│   └── TrackingUnavailable.jsx
+│
+├── App.jsx
+├── App.css
+└── main.jsx
+
+🌐 Deployment
+
+The project can be deployed using Vercel, Netlify, or another hosting service.
+
+Submission
+
+Live URL:
+https://your-project.vercel.app
+
+GitHub:
+https://github.com/Sangma83/VecoSoft_assesstment
