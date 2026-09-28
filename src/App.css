@@ -1,0 +1,834 @@
+@import "tailwindcss";
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #eef3f8;
+  color: #12233f;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* =========================
+   APP
+========================= */
+
+.app {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 40px;
+
+  padding: 30px;
+}
+
+/* =========================
+   DEMO PANEL
+========================= */
+
+.demo-panel {
+  width: 310px;
+  background: white;
+
+  border-radius: 20px;
+  padding: 24px;
+
+  box-shadow: 0 15px 40px rgba(20, 50, 90, 0.08);
+}
+
+.demo-panel h2 {
+  margin: 0 0 7px;
+
+  font-size: 22px;
+}
+
+.demo-panel p {
+  margin: 0 0 20px;
+
+  color: #6c7b91;
+  font-size: 14px;
+}
+
+.state-buttons {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.state-buttons button {
+  border: 1px solid #dbe3ec;
+
+  background: white;
+
+  padding: 12px 15px;
+
+  border-radius: 10px;
+
+  text-align: left;
+
+  font-weight: 600;
+
+  color: #31435e;
+}
+
+.state-buttons button.active {
+  background: #1769e0;
+  color: white;
+
+  border-color: #1769e0;
+}
+
+.state-buttons button.delayed-btn {
+  border-color: #f2b7b7;
+}
+
+.state-buttons button.warning-btn {
+  border-color: #f1d08b;
+}
+
+.state-buttons button.gray-btn {
+  border-color: #cdd5df;
+}
+
+/* =========================
+   PHONE
+========================= */
+
+.phone {
+  width: 390px;
+  max-width: 100%;
+
+  min-height: 780px;
+
+  background: #f8fafc;
+
+  border: 8px solid #102a4c;
+
+  border-radius: 40px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 70px rgba(20, 45, 80, 0.25);
+
+  position: relative;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 18px;
+
+  background: white;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.header h1 {
+  font-size: 17px;
+
+  margin: 0;
+
+  font-weight: 700;
+}
+
+.icon-button {
+  border: 0;
+
+  background: transparent;
+
+  color: #153a67;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+  padding: 16px;
+
+  overflow-y: auto;
+
+  max-height: 700px;
+}
+
+/* =========================
+   ORDER CARD
+========================= */
+
+.order-card {
+  background: white;
+
+  border: 1px solid #e6ebf1;
+
+  border-radius: 15px;
+
+  padding: 13px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 13px;
+}
+
+.product-icon {
+  width: 43px;
+  height: 43px;
+
+  border-radius: 50%;
+
+  background: #fff3d9;
+
+  color: #ec9a00;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.order-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.order-info strong {
+  display: block;
+
+  font-size: 12px;
+
+  margin-bottom: 4px;
+}
+
+.order-info span {
+  display: block;
+
+  color: #718096;
+
+  font-size: 10px;
+}
+
+.status-pill {
+  font-size: 9px;
+
+  font-weight: 700;
+
+  padding: 6px 8px;
+
+  border-radius: 20px;
+
+  white-space: nowrap;
+}
+
+.status-normal {
+  color: #087b4f;
+  background: #dcf8ea;
+}
+
+.status-delayed {
+  color: #d73838;
+  background: #ffe2e2;
+}
+
+.status-delivered {
+  color: #53606f;
+  background: #e9edf2;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline-card {
+  background: white;
+
+  border: 1px solid #e6ebf1;
+
+  border-radius: 15px;
+
+  padding: 18px 8px;
+
+  margin-bottom: 13px;
+}
+
+.timeline {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+}
+
+.timeline-step {
+  text-align: center;
+
+  width: 70px;
+
+  position: relative;
+}
+
+.timeline-icon {
+  width: 28px;
+  height: 28px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e2e8f0;
+
+  color: white;
+}
+
+.timeline-icon.completed {
+  background: #1685e8;
+}
+
+.timeline-icon.current {
+  background: #1685e8;
+
+  box-shadow:
+    0 0 0 5px rgba(22, 133, 232, 0.12);
+}
+
+.step-title {
+  font-size: 9px;
+
+  font-weight: 700;
+
+  margin-top: 7px;
+
+  line-height: 12px;
+}
+
+.step-date {
+  font-size: 8px;
+
+  color: #7b8796;
+
+  margin-top: 3px;
+}
+
+.timeline-line {
+  flex: 1;
+
+  height: 3px;
+
+  background: #e1e7ee;
+
+  margin-top: 13px;
+
+  min-width: 8px;
+}
+
+.timeline-line.completed-line {
+  background: #1685e8;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+  display: flex;
+
+  gap: 10px;
+
+  padding: 13px;
+
+  border-radius: 13px;
+
+  margin-bottom: 13px;
+
+  border: 1px solid;
+}
+
+.delayed-message {
+  background: #fff0f0;
+
+  border-color: #ffd0d0;
+
+  color: #a92e2e;
+}
+
+.received-message {
+  background: #eafff4;
+
+  border-color: #bcefd3;
+
+  color: #087b4f;
+}
+
+.message-icon {
+  flex-shrink: 0;
+}
+
+.message strong {
+  font-size: 12px;
+}
+
+.message p {
+  margin: 5px 0;
+
+  font-size: 10px;
+
+  line-height: 15px;
+
+  color: #5f6b7b;
+}
+
+.small-note {
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+/* =========================
+   DELIVERY CARD
+========================= */
+
+.delivery-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px;
+
+  background: white;
+
+  border: 1px solid #e6ebf1;
+
+  border-radius: 14px;
+
+  margin-bottom: 13px;
+}
+
+.delivery-icon {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 10px;
+
+  background: #e9f4ff;
+
+  color: #1685e8;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.delivery-card > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.card-label {
+  color: #758196;
+
+  font-size: 9px;
+}
+
+.delivery-card strong {
+  font-size: 13px;
+}
+
+.delivery-time {
+  font-size: 10px;
+
+  color: #66748a;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  background: white;
+
+  border: 1px solid #e6ebf1;
+
+  border-radius: 14px;
+
+  padding: 14px;
+
+  margin-bottom: 13px;
+}
+
+.section-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+}
+
+.section-header h3 {
+  margin: 0;
+
+  font-size: 12px;
+}
+
+.details-btn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #1769e0;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+/* =========================
+   PRODUCT
+========================= */
+
+.item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.shoe-image {
+  width: 55px;
+  height: 55px;
+
+  border-radius: 10px;
+
+  background: #f1f4f7;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 27px;
+}
+
+.item-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.item-info strong {
+  font-size: 11px;
+}
+
+.item-info span {
+  color: #7b8797;
+
+  font-size: 9px;
+}
+
+.item-info b {
+  font-size: 11px;
+}
+
+/* =========================
+   ADDRESS
+========================= */
+
+.address {
+  display: flex;
+
+  gap: 11px;
+
+  align-items: flex-start;
+}
+
+.address-icon {
+  color: #1685e8;
+
+  margin-top: 1px;
+}
+
+.address p {
+  margin: 5px 0 0;
+
+  color: #55657b;
+
+  font-size: 9px;
+
+  line-height: 14px;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.actions {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+
+  padding-bottom: 15px;
+}
+
+.actions button {
+  height: 43px;
+
+  border-radius: 10px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+}
+
+.support-btn {
+  background: white;
+
+  border: 1px solid #1769e0;
+
+  color: #1769e0;
+}
+
+.primary-btn {
+  background: #1769e0;
+
+  border: 1px solid #1769e0;
+
+  color: white;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+  padding: 35px 20px;
+
+  text-align: center;
+}
+
+.empty-icon {
+  width: 90px;
+  height: 90px;
+
+  margin: 20px auto;
+
+  border-radius: 50%;
+
+  background: #eaf2fb;
+
+  color: #6581a2;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state h2 {
+  font-size: 20px;
+
+  margin: 20px 0 10px;
+}
+
+.empty-state > p {
+  color: #6e7b8e;
+
+  font-size: 12px;
+
+  line-height: 18px;
+
+  max-width: 280px;
+
+  margin: auto;
+}
+
+.empty-info {
+  margin-top: 25px;
+
+  padding: 14px;
+
+  border-radius: 13px;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  display: flex;
+
+  gap: 10px;
+
+  text-align: left;
+
+  color: #1769e0;
+}
+
+.empty-info div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.empty-info strong {
+  color: #26364f;
+
+  font-size: 11px;
+}
+
+.empty-info span {
+  color: #78869a;
+
+  font-size: 9px;
+
+  line-height: 13px;
+}
+
+.retry-btn {
+  margin-top: 20px;
+
+  width: 100%;
+
+  height: 43px;
+
+  border: 0;
+
+  border-radius: 10px;
+
+  background: #1769e0;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+}
+
+.support-link {
+  margin-top: 12px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #1769e0;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .app {
+    padding: 0;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+  }
+
+  .demo-panel {
+    display: none;
+  }
+
+  .phone {
+    width: 100%;
+
+    max-width: 430px;
+
+    min-height: 100vh;
+
+    border: 0;
+
+    border-radius: 0;
+
+    box-shadow: none;
+  }
+
+  .content {
+    max-height: none;
+  }
+}
