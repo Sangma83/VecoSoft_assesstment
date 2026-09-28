@@ -68,7 +68,7 @@ The project can be deployed using Vercel, Netlify, or another hosting service.
 Submission
 
 Live URL:
-https://your-project.vercel.app
+https://ordertraking-lilac.vercel.app/
 
 GitHub:
 https://github.com/Sangma83/VecoSoft_assesstment
